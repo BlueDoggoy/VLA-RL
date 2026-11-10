@@ -1,0 +1,19 @@
+{
+  "task": "CloseFridge",
+  "base_policy": "lerobot/smolvla_robocasa",
+  "seed_sets": {
+    "train": [0, 1, 2],
+    "validation": [100, 101],
+    "test": [200, 201, 202]
+  },
+  "evaluation_episodes_per_seed": 20,
+  "methods": ["base_vla", "residual_td3", "confidence_gate", "temporal_gate"],
+  "faults": [
+    {"kind": "clean", "magnitude_m": 0.0, "start_step": 20, "duration_steps": 40},
+    {"kind": "jitter", "magnitude_m": 0.01, "start_step": 20, "duration_steps": 40},
+    {"kind": "bias", "magnitude_m": 0.01, "start_step": 20, "duration_steps": 40},
+    {"kind": "freeze", "magnitude_m": 0.0, "start_step": 20, "duration_steps": 40},
+    {"kind": "dropout", "magnitude_m": 0.0, "start_step": 20, "duration_steps": 40}
+  ],
+  "notes": "Pilot settings only. No performance or physical sensor realism is implied. All methods except the fault generator require implementation."
+}

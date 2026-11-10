@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Downloaded assets and generated outputs
+data/
+datasets/
+checkpoints/
+assets_downloaded/
+third_party/
+runs/
+wandb/
+*.mp4
+*.pt
+*.pth
+*.safetensors
+.DS_Store
+Thumbs.db
